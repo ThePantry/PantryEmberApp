@@ -4,7 +4,7 @@ define('ember-pantry-client-app/tests/app.jshint', ['exports'], function (export
   QUnit.module('JSHint - app.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'app.js should pass jshint.\napp.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 4, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 6, col 1, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\napp.js: line 13, col 3, \'object short notation\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\napp.js: line 18, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n7 errors');
+    assert.ok(true, 'app.js should pass jshint.');
   });
 });
 define('ember-pantry-client-app/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
@@ -108,7 +108,7 @@ define('ember-pantry-client-app/tests/resolver.jshint', ['exports'], function (e
   QUnit.module('JSHint - resolver.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'resolver.js should pass jshint.\nresolver.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nresolver.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'resolver.js should pass jshint.');
   });
 });
 define('ember-pantry-client-app/tests/router.jshint', ['exports'], function (exports) {
@@ -117,7 +117,7 @@ define('ember-pantry-client-app/tests/router.jshint', ['exports'], function (exp
   QUnit.module('JSHint - router.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'router.js should pass jshint.\nrouter.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nrouter.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nrouter.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nrouter.js: line 13, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
+    assert.ok(true, 'router.js should pass jshint.');
   });
 });
 define('ember-pantry-client-app/tests/routes/about.jshint', ['exports'], function (exports) {
@@ -126,16 +126,7 @@ define('ember-pantry-client-app/tests/routes/about.jshint', ['exports'], functio
   QUnit.module('JSHint - routes/about.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/about.js should pass jshint.\nroutes/about.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/about.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
-  });
-});
-define('ember-pantry-client-app/tests/routes/contact-us.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint - routes/contact-us.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(false, 'routes/contact-us.js should pass jshint.\nroutes/contact-us.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/contact-us.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/about.js should pass jshint.');
   });
 });
 define('ember-pantry-client-app/tests/test-helper', ['exports', 'ember-pantry-client-app/tests/helpers/resolver', 'ember-qunit'], function (exports, _emberPantryClientAppTestsHelpersResolver, _emberQunit) {
@@ -170,27 +161,6 @@ define('ember-pantry-client-app/tests/unit/routes/about-test.jshint', ['exports'
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/about-test.js should pass jshint.');
-  });
-});
-define('ember-pantry-client-app/tests/unit/routes/contact-us-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleFor)('route:contact-us', 'Unit | Route | contact us', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
-  });
-
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var route = this.subject();
-    assert.ok(route);
-  });
-});
-define('ember-pantry-client-app/tests/unit/routes/contact-us-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint - unit/routes/contact-us-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/routes/contact-us-test.js should pass jshint.');
   });
 });
 /* jshint ignore:start */
