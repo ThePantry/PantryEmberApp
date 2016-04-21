@@ -9,19 +9,13 @@ export default Ember.Controller.extend({
   rememberMeBox: '',
   submitButton: '',
 
-  emailIsValid: Ember.computed.match('emailLogin', /^.+@.+\..+$/),
+  emailIsValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
   emailNotValid: Ember.computed.not('emailIsValid'),
 
-  passwordIsValid: Ember.computed.match('passwordLogin', /^.+@.+\..+$/),
+  passwordIsValid: Ember.computed.match('password', /^.+@.+\..+$/),
   passwordNotValid: Ember.computed.not('passwordIsValid'),
- 
-  isDisabled: Ember.computed('emailNotValid', 'passwordNotValid', function() {
-    if (this.emailNotValid && this.passwordNotValid) {
-      return true;
-    } 
-    return false;
-  }),
 
+  isDisabled: Ember.computed.or('emailNotValid', 'passwordNotValid'),
 
   actions: {
 

@@ -2,20 +2,20 @@
 
 
 <div class="login text-center">
-<form class="form-inline">
+<form class="form-inline" {{action "saveInvitation" on="submit"}}>
   <div class="form-group">
     <label class="sr-only" for="exampleInputEmail3">Email address</label>
-    {{input type="email" value=emailLogin class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
+    {{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
   </div>
   <div class="form-group">
     <label class="sr-only" for="exampleInputPassword3">Password</label>
-    {{input type="password" class="form-control" id="exampleInputPassword3" value=passwordLogin placeholder="Password" autofocus="autofocus" passwordEntered="passwordIsValid"}}    
+    {{input type="password" class="form-control" id="exampleInputPassword3" value=password placeholder="Password" autofocus="autofocus" passwordEntered="passwordIsValid"}}
   </div>
   <div class="checkbox">
     <label>
       <input type="checkbox" RememberMe={{isRememberMe}}> Remember me
     </label>
   </div>
-  <button type="submit" class="btn btn-default" disabled={{isDisabled}} submit={{isSubmitted}}>Sign in</button>
+  <button type="submit" class="btn btn-default" disabled={{isDisabled}}>Sign in</button>
 </form>
 </div>
