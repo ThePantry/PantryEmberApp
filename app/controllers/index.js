@@ -4,9 +4,18 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   emailAddress: '',
+  userName: '',
+  password: '',
+  rememberMeBox: '',
+  submitButton: '',
 
-  isValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
-  isDisabled: Ember.computed.not('isValid'),
+  emailIsValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
+  emailNotValid: Ember.computed.not('emailIsValid'),
+
+  passwordIsValid: Ember.computed.match('password', /^.+@.+\..+$/),
+  passwordNotValid: Ember.computed.not('passwordIsValid'),
+
+  isDisabled: Ember.computed.or('emailNotValid', 'passwordNotValid'),
 
   actions: {
 
