@@ -7,5 +7,8 @@ export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
 
 export default DS.JSONAPIAdapter.extend({
   host: 'http://localhost:50736',
-  namespace: 'api'
+  namespace: 'api',
+	headers: {
+	    "X-Requested-With": "XMLHttpRequest"
+	}
 });
